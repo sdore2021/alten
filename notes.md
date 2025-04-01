@@ -33,7 +33,7 @@ ng serve
 Une fois lancé, vous pouvez accéder au projet via l'URL : [http://localhost:4200/](http://localhost:4200/)
 
 
-**INFORMATION DE CONNEXION : **
+4. **INFORMATION DE CONNEXION :**
 compte: admin@admin.fr mdp: admin
 
 
