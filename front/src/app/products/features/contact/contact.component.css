@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Centrer la carte dans la page */
+.form-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* height: 100vh;
+    padding: 2rem;*/
+    margin-top: 2rem;
+}
+
+/* Container pour centrer le formulaire et ajouter des espacements */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 40rem;
+}
+
+/* Style pour chaque champ (label + input/textarea) */
+.p-field {
+    width: 100%;
+    margin-bottom: 1.5rem;  /* Espacement entre les champs */
+}
+
+/* Améliorer l'espacement entre le label et l'input */
+.p-field label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Taille des inputs et des textareas pour un bon confort visuel */
+.p-inputtext-lg, .p-inputtextarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Ajout de l'effet au focus des inputs */
+.p-inputtext-lg:focus, .p-inputtextarea:focus {
+    border-color: #5c6bc0; /* Bleu de focus */
+    box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+}
+
+/* Style pour le bouton */
+.p-button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* Utilisation de l'alignement flexbox pour le bouton */
+.p-d-flex {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,69 @@
+<!--<div class="card flex justify-center">
+    <div class="flex flex-col gap-4">
+       
+        <p-message *ngIf="formSubmitted && !formHasErrors" severity="success" icon="pi pi-check-circle" styleClass="mb-2">
+            Demande de contact envoyée avec succès
+        </p-message>
+
+     
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+           
+            <div class="flex flex-col gap-1">
+                <input pInputText 
+                       placeholder="Email" 
+                       aria-label="email" 
+                       name="email" 
+                       [(ngModel)]="email" 
+                       required 
+                       email 
+                       #emailField="ngModel" />
+                <p-message *ngIf="emailField.invalid && emailField.touched" severity="error" variant="simple" size="small">
+                    L'email est requis et doit être valide.
+                </p-message>
+            </div>
+
+        
+            <div class="flex flex-col gap-1">
+                <textarea pInputTextarea
+                          placeholder="Votre message"
+                          aria-label="message"
+                          name="message"
+                          [(ngModel)]="message"
+                          required
+                          maxlength="300"
+                          #messageField="ngModel"></textarea>
+                <p-message *ngIf="messageField.invalid && messageField.touched" severity="error" variant="simple" size="small">
+                    Le message est requis et ne doit pas dépasser 300 caractères.
+                </p-message>
+            </div>
+
+         
+            <button pButton label="Envoyer" type="submit" [disabled]="contactForm.invalid"></button>
+        </form>
+    </div>
+</div> -->
+
+<p-card [style]="{ width: '50rem', overflow: 'hidden' }" class="form-card">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+
+        <div class="p-field p-fluid">
+            <label for="email" class="p-d-block">Email</label>
+            <input pInputText id="email" type="email" class="p-inputtext-lg" formControlName="email" required/>
+        </div>
+
+        <div class="p-field p-fluid">
+            <label for="message" class="p-d-block">Message</label>
+            <textarea pInputTextarea id="message" rows="5" class="p-inputtext-lg" maxlength="300" formControlName="message" required></textarea>
+        </div>
+
+       
+        <div class="p-d-flex p-jc-center">
+            <p-button label="Envoyer" icon="pi pi-paper-plane" class="p-button-lg" type="submit" [disabled]="!contactForm.valid"></p-button>
+        </div>
+    </div>
+    <p-toast />
+  </form>
+</p-card>
+
+

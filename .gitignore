@@ -1,0 +1,24 @@
+# Ignorer les fichiers de configuration IDE
+.idea/
+.vscode/
+
+# Ignorer les fichiers temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers de build et les répertoires
+target/
+bin/
+out/
+
+# Ignorer les fichiers générés par Maven
+*.class
+*.jar
+*.war
+
+# Ignorer les fichiers du système
+.DS_Store
+Thumbs.db
+
+.node_modules
+*node_modules*

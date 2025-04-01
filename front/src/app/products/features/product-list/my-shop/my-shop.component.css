@@ -1,0 +1,7 @@
+.scrool {
+    height: 99%;             /* Hauteur fixe pour activer le défilement */
+    overflow-y: auto;          /* Défilement vertical */
+    scroll-behavior: smooth;   /* Défilement fluide */
+    padding: 10px;             /* Optionnel : ajout de padding pour un espacement intérieur */
+  }
+  
