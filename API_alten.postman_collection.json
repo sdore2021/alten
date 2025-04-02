@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "e9158291-d876-4815-b480-fd5d0bb3c750",
+		"name": "API_alten",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20188894"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/auth/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@user.fr\",\r\n  \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/auth/account",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user\",\r\n  \"firstname\": \"user\",\r\n  \"email\": \"user@user.fr\",\r\n  \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuZnIiLCJpYXQiOjE3NDM2MjI4NjEsImV4cCI6MTc0MzYyNjQ2MX0.pbStjU5nbC4zAhyW3pRz9bBsV_lcgoxU087stqJEOuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/product/1000",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuZnIiLCJpYXQiOjE3NDM2MjI4NjEsImV4cCI6MTc0MzYyNjQ2MX0.pbStjU5nbC4zAhyW3pRz9bBsV_lcgoxU087stqJEOuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/1000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/product/onlyAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuZnIiLCJpYXQiOjE3NDM2MjI4NjEsImV4cCI6MTc0MzYyNjQ2MX0.pbStjU5nbC4zAhyW3pRz9bBsV_lcgoxU087stqJEOuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"newcode\",\r\n  \"name\": \"newName\",\r\n  \"description\": \"new description\",\r\n  \"image\": \"new image\",\r\n  \"category\": \"new category\",\r\n  \"price\": \"145\",\r\n  \"quantity\": 0,\r\n  \"internalreference\": \"string\",\r\n  \"shellid\": 0,\r\n  \"inventorystatus\": \"string\",\r\n  \"rating\": 0,\r\n  \"createdat\": 0,\r\n  \"updatedat\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/onlyAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"onlyAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/product/onlyAdmin/1000",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5mciIsImlhdCI6MTc0MzYyMzM0NiwiZXhwIjoxNzQzNjI2OTQ2fQ.4Nxv623PvDbE3XsOpeKwJnE-mQrOYAAfgmsg5DZAzus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/onlyAdmin/1000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"onlyAdmin",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
