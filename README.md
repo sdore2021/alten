@@ -103,7 +103,7 @@ La documentation existe sur le lien : [http://localhost:8080/swagger-ui/index.ht
 
 3. **Lancez le serveur de développement Angular :**
    ```sh
-   ng serve
+   ng serve ou npm run start 
    ```
 
 Une fois lancé, vous pouvez accéder au projet via l'URL : [http://localhost:4200/](http://localhost:4200/)
